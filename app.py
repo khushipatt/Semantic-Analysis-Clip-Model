@@ -4,6 +4,15 @@ from PIL import Image
 import numpy as np
 import os
 
+
+st.write("Current working directory:", os.getcwd())
+st.write("All files/folders in current directory:", os.listdir("."))
+st.write("Does 'my_photos' exist?", os.path.exists("my_photos"))
+if os.path.exists("my_photos"):
+    st.write("Files in my_photos:", os.listdir("my_photos"))
+else:
+    st.write("my_photos NOT found — check repo structure")
+
 st.title("Semantic search with clip model")
 
 # Use a tiny model that has very small weights and loads fast
@@ -61,4 +70,5 @@ if query:
     best_path = image_paths[top_idx]
 
     st.write("**Best match:**", os.path.basename(best_path))
+
     st.image(best_path)
