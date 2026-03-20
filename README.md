@@ -1,6 +1,6 @@
 #  Semantic Image Search — NLP Sem 6 Assignment
 
-This is a semantic image search app I built using OpenAI's CLIP model. The idea is simple, instead of searching images by their filename or tags, you just type something like *"dog in hands"* or *"flowers in a car"* and it finds the most visually matching photo from your collection. No manual labeling, no metadata — just the image and a text query.
+This is a semantic image search app I built using OpenAI's CLIP model. The idea is simple, instead of searching images by their filename or tags, you just type something like *"dog in hands"* or *"flowers in a car"* and it finds the most visually matching photo from your collection. No manual labeling, no metadata just the image and a text query.
 
 ---
 
@@ -8,7 +8,7 @@ This is a semantic image search app I built using OpenAI's CLIP model. The idea 
 
 Normal search looks for keywords. This doesn't do that at all.
 
-CLIP (Contrastive Language–Image Pretraining) is a model trained on a massive amount of image-text pairs. What's cool about it is that it learned to understand both images and text in the *same* space — meaning it can compare a photo of a sloth holding a strawberry to the sentence "cute animal with fruit" and tell you they're similar.
+CLIP (Contrastive Language–Image Pretraining) is a model trained on a massive amount of image-text pairs. What's cool about it is that it learned to understand both images and text in the *same* space  meaning it can compare a photo of a sloth holding a strawberry to the sentence "cute animal with fruit" and tell you they're similar.
 
 So when you type a query, the app:
 1. Converts your text into a vector (a list of numbers representing meaning)
@@ -16,7 +16,7 @@ So when you type a query, the app:
 3. Finds whichever image vector is closest to your text vector
 4. Shows you the best match
 
-That's it. No training required on your end — CLIP already knows what things look like.
+That's it. No training required on your end  CLIP already knows what things look like.
 
 ---
 
