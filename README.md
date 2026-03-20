@@ -1,10 +1,10 @@
-# 🔍 Semantic Image Search — NLP Sem 6 Project
+#  Semantic Image Search — NLP Sem 6 Assignment
 
-This is a semantic image search app I built using OpenAI's CLIP model. The idea is simple — instead of searching images by their filename or tags, you just type something like *"dog in hands"* or *"flowers in a car"* and it finds the most visually matching photo from your collection. No manual labeling, no metadata — just the image and a text query.
+This is a semantic image search app I built using OpenAI's CLIP model. The idea is simple, instead of searching images by their filename or tags, you just type something like *"dog in hands"* or *"flowers in a car"* and it finds the most visually matching photo from your collection. No manual labeling, no metadata — just the image and a text query.
 
 ---
 
-## 🧠 What's actually happening here?
+##  What's actually happening here?
 
 Normal search looks for keywords. This doesn't do that at all.
 
@@ -20,7 +20,7 @@ That's it. No training required on your end — CLIP already knows what things l
 
 ---
 
-## 🚀 Running it
+##  Running it
 
 **1. Install the packages**
 ```bash
@@ -48,7 +48,7 @@ streamlit run app.py
 
 ---
 
-## 📁 What's in the repo
+## What's in the repo
 
 ```
 ├── app.py              # The whole app — loads CLIP, processes images, handles search
@@ -61,7 +61,7 @@ streamlit run app.py
 
 ---
 
-## 🖼️ Sample images I tested with
+##  Sample images I tested with
 
 The app was tested with a mix of photos to make sure CLIP could tell them apart:
 
@@ -75,7 +75,7 @@ Queries like `"dog in hands"`, `"flowers"`, `"airplane at night"`, and `"cute an
 
 ---
 
-## ⚙️ How the code works
+##  How the code works
 
 Everything lives in `app.py`. Here's what it does step by step:
 
@@ -93,7 +93,7 @@ It displays the filename and the image. Simple as that.
 
 ---
 
-## 📦 Libraries used
+##  Libraries used
 
 | Library | Why it's here |
 |---|---|
@@ -105,20 +105,3 @@ It displays the filename and the image. Simple as that.
 | `numpy` | Computing dot product similarity between embeddings |
 | `transformers` | Pulled in as a dependency, not used directly |
 
----
-
-## 💡 Quick glossary (viva prep)
-
-**CLIP** — A model by OpenAI that maps both images and text into the same vector space so they can be directly compared.
-
-**Embedding / Vector** — A list of numbers that represents the "meaning" of an image or piece of text. Similar things have similar vectors.
-
-**Dot Product Similarity** — A way to measure how close two vectors are. Higher = more similar. Used here instead of cosine similarity (works fine when vectors are already normalized).
-
-**RN50** — ResNet-50, a CNN architecture used as CLIP's image encoder. Smaller and faster than ViT-based variants.
-
-**Semantic Search** — Finding results based on *meaning* rather than exact keyword matches. This is the whole point of the project.
-
----
-
-*Semester 6 NLP project 🎓*
